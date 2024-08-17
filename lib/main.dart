@@ -14,7 +14,7 @@ class ScholarChat extends StatelessWidget {
       debugShowCheckedModeBanner: false,
 
 
-      home: Scaffold(),
+      home: LoginPage(),
     );
 
   }
