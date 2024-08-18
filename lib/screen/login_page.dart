@@ -41,7 +41,7 @@ class LoginPage extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-           CustomButton(),
+           CustomButton(text:"Login" ,),
         SizedBox(
           height: 20,),
             Row(

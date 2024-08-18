@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key});
-
+ CustomButton({super.key,required this.text});
+  String text;
   @override
   Widget build(BuildContext context) {
     return   Container(
       decoration: BoxDecoration(
           color: Colors.white, borderRadius: BorderRadius.circular(16)),
-      child: const Center(child: Text("Log in")),
+      child:  Center(child: Text(text)),
       width: double.infinity,
       height: 65,
     );

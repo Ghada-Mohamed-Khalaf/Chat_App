@@ -39,7 +39,7 @@ class RegisterPage extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            CustomButton(),
+            CustomButton(text: "login",),
             SizedBox(
               height: 20,),
             Row(
