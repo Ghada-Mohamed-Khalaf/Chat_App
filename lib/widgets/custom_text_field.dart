@@ -8,7 +8,7 @@ String? hintText;
   @override
   Widget build(BuildContext context) {
     return    TextField(decoration: InputDecoration(
-      hintText: "Email",hintStyle: TextStyle(color: Colors.white),
+      hintText:hintText,hintStyle: TextStyle(color: Colors.white),
 
       border: OutlineInputBorder(
 
