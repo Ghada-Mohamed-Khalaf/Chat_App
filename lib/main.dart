@@ -1,6 +1,7 @@
 import 'dart:js';
 
 import 'package:chat_app/screen/login_page.dart';
+import 'package:chat_app/screen/register_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,6 +20,7 @@ class ScholarChat extends StatelessWidget {
      initialRoute:  "LoginPage()",
       routes: {
         "LoginPage":(context) => const LoginPage(),
+        "RegisterPage":(context) => const RegisterPage(),
       },
     );
 
