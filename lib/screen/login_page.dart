@@ -1,3 +1,4 @@
+import 'package:chat_app/constant.dart';
 import 'package:chat_app/screen/register_page.dart';
 import 'package:chat_app/widgets/custom_button.dart';
 import 'package:chat_app/widgets/custom_text_field.dart';
@@ -10,7 +11,7 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) { 
     return Scaffold(
-      backgroundColor: const Color(0xff2B475E),
+      backgroundColor: kPrimaryColor ,
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal:16 ),
         child: Column(
@@ -53,7 +54,7 @@ class LoginPage extends StatelessWidget {
 
 
                   } ,
-                  child: Text('  Register',style: TextStyle(color:Color(0xffc7EDE6),),
+                  child: Text('  Register',style: TextStyle(color:kPrimaryColor ,),
                   ),
                 ),
               ],
