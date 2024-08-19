@@ -15,7 +15,7 @@ class LoginPage extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal:16 ),
         child: Column(
          // mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
+          //  crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Image.asset(
               'assets/images/scholar.png',

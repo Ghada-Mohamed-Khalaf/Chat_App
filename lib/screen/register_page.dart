@@ -13,7 +13,7 @@ class RegisterPage extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal:16 ),
         child: Column(
           // mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
+         // crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Image.asset(
               'assets/images/scholar.png',
@@ -39,13 +39,13 @@ class RegisterPage extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            CustomButton(text: "login",),
+            CustomButton(text: "Register",),
             SizedBox(
               height: 20,),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [Text("don't have an account?",style: TextStyle(color: Colors.white),),
-                Text('  Register',style: TextStyle(color:Color(0xffc7EDE6),),
+              children: [Text("ready have an account?",style: TextStyle(color: Colors.white),),
+                Text(' Log in',style: TextStyle(color:Color(0xffc7EDE6),),
                 ),
               ],
             ),
