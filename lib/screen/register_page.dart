@@ -4,7 +4,8 @@ import 'package:chat_app/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
 
 class RegisterPage extends StatelessWidget {
-  const RegisterPage({super.key});
+  RegisterPage({super.key});
+  String id =  "registerPage";
 
   @override
   Widget build(BuildContext context) {
