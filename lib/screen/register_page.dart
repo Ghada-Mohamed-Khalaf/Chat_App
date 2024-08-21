@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 class RegisterPage extends StatelessWidget {
   RegisterPage({super.key});
-  String id =  "registerPage";
+  static String id =  "registerPage";
 
   @override
   Widget build(BuildContext context) {
