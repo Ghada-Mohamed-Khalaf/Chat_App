@@ -2,9 +2,16 @@ import 'dart:js';
 
 import 'package:chat_app/screen/login_page.dart';
 import 'package:chat_app/screen/register_page.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+import 'firebase_options.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const  ScholarChat());
 }
 
