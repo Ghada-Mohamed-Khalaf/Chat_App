@@ -2,11 +2,14 @@ import 'package:chat_app/constant.dart';
 import 'package:chat_app/screen/login_page.dart';
 import 'package:chat_app/widgets/custom_button.dart';
 import 'package:chat_app/widgets/custom_text_field.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class RegisterPage extends StatelessWidget {
   RegisterPage({super.key});
+  String? email;
+  String? password;
 
 
   @override
@@ -32,18 +35,44 @@ class RegisterPage extends StatelessWidget {
               style: TextStyle(color: Colors.white, fontSize: 14),
             ),
             CustomTextField(
+              onChanged: (data){
+                email=data;
+
+              },
+
               hintText: 'Email',
             ),
             const SizedBox(
               height: 10,
             ),
             CustomTextField(
+              onChanged: (data){
+               password=data;
+
+
+              },
+
               hintText: 'password',
             ),
             const SizedBox(
               height: 20,
             ),
-            CustomButton(text: "Register",),
+            CustomButton(
+              onTap: ()async{
+                
+              try {
+                var auth= FirebaseAuth.instance;
+                 UserCredential user= await auth.createUserWithEmailAndPassword(email: email!, password: password!);
+              } catch (e) {
+                ScaffoldMessenger.of(context).showSnackBar(SnackBar(content:Text("there was an error,please try agian") ,));
+                print(e);
+                // TODO
+              }
+             
+
+              },
+
+              text: "Register",),
             SizedBox(
               height: 20,),
             Row(
