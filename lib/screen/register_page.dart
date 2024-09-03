@@ -7,10 +7,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
-class RegisterPage extends StatelessWidget {
+class RegisterPage extends StatefulWidget {
   RegisterPage({super.key});
+
+  @override
+  State<RegisterPage> createState() => _RegisterPageState();
+}
+
+class _RegisterPageState extends State<RegisterPage> {
   String? email;
+
   String? password;
+
   bool isLoading= false;
 
 GlobalKey<FormState>formKey=GlobalKey();
@@ -25,7 +33,7 @@ GlobalKey<FormState>formKey=GlobalKey();
           child: Form(
             key:formKey,
             child: ListView(
-            
+
                 // mainAxisAlignment: MainAxisAlignment.center,
                // crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -44,9 +52,9 @@ GlobalKey<FormState>formKey=GlobalKey();
                   CustomTextField(
                     onChanged: (data){
                       email=data;
-            
+
                     },
-            
+
                     hintText: 'Email',
                   ),
                   const SizedBox(
@@ -55,10 +63,10 @@ GlobalKey<FormState>formKey=GlobalKey();
                   CustomTextField(
                     onChanged: (data){
                      password=data;
-            
-            
+
+
                     },
-            
+
                     hintText: 'password',
                   ),
                   const SizedBox(
@@ -74,8 +82,8 @@ GlobalKey<FormState>formKey=GlobalKey();
                           if (e.code == 'weak-password') {
                             showSnackBar(context, "weak password");
                           }
-      
-      
+
+
                           else if (e.code == 'email-already-in-use') {
                             showSnackBar(context, 'email-already-in-use');
                           }
@@ -84,16 +92,16 @@ GlobalKey<FormState>formKey=GlobalKey();
                           showSnackBar(context, "there was an error");
                         }
                         isLoading= false;
-      
-      
+
+
                         showSnackBar(context, "success");
                       }
                       else{
-      
+
                       }
-            
+
                     },
-            
+
                     text: "Register",),
                   SizedBox(
                     height: 20,),
@@ -103,9 +111,9 @@ GlobalKey<FormState>formKey=GlobalKey();
                       TextButton(
                    onPressed: () {
                  Navigator.pop(context);
-            
-            
-            
+
+
+
                         },
                         child: Text(' Log in',style: TextStyle(color:kPrimaryColor ,),
                         ),
@@ -116,7 +124,7 @@ GlobalKey<FormState>formKey=GlobalKey();
               ),
           ),
           ),
-      
+
       ),
     );
   }
